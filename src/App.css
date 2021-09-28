@@ -1,38 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .App {
   text-align: center;
+  width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: crimson;
+  border-radius: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App h2 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App .btn {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.person_container .person {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 7px;
+}
+.person_container .person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.person_container .person .left_info {
+  margin-left: 30px;
+  display: flex;
+}
+.person_container .person .left_info .list_info {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.person_container .person .left_info .list_info p {
+  color: gray;
+  font-weight: bold;
+}
+.person_container .person .remove {
+  padding: 7px;
+  font-size: 16px;
+  height: 30%;
+  margin: auto 0;
+  border-radius: 5px;
+  border: none;
+  background-color: lightgray;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
