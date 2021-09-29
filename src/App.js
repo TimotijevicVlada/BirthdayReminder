@@ -1,19 +1,23 @@
 import {useState} from 'react';
 import './App.css';
-import data from './data';
+import {data} from './data';
 import List from './List';
 
 const App = () => {
 
-  const [person, setPerson] = useState(data);
+  const [people, setPeople] = useState(data);
 
-  console.log(person)
+  const removeItem = (id) => {
+    const newPeople = people.filter(person => person.id !== id);
+    setPeople(newPeople);
+  }
+
 
   return (
     <div className="App">
-      <h2>{person.length} birthday today</h2>
-      <List person={person} setPerson={setPerson}/>
-      <button className="btn" onClick={() => setPerson([])}>Clear all</button>
+      <h2>{people.length} birthday today</h2>
+      <List people={people} removeItem={removeItem}/>
+      <button className="btn" onClick={() => setPeople([])}>Clear all</button>
     </div>
   );
 }

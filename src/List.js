@@ -1,10 +1,11 @@
 import React from "react";
 
-const List = ({ person }) => {
+const List = ({ people, removeItem }) => {
 
+  
   return (
     <div className="person_container">
-      {person.map((person) => (
+      {people.map((person) => (
         <div className="person" key={person.id}>
           <div className="left_info">
             <img src={person.image} alt={person.name} />
@@ -13,7 +14,7 @@ const List = ({ person }) => {
               <p>{person.age} years</p>
             </div>
           </div>
-          <button className="remove">remove</button>
+          <button className="remove" onClick={() => removeItem(person.id)}>remove</button>
         </div>
       ))}
     </div>
